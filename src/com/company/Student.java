@@ -6,17 +6,26 @@ import java.time.Period;
 import java.util.Date;
 
 public class Student {
-    private String studentDate;
+    private String birthday;
     private String studentName;
     private String studentSoName;
     private String studentEmail;
 
-    public Student(String studentDate, String studentName, String studentSoName, String studentEmail) {
-        LocalDate localdate = LocalDate.parse(studentDate);
+    @Override
+    public String toString() {
+        return "Студент{" +
+                "Фамилиясы жана аты:'" + studentSoName + " " + studentName + '\'' +
+                ", туулган куну:'" + birthday + '\'' +
+                ", Электрондук дареги='" + studentEmail + '\'' +
+                '}';
+    }
+
+    public Student(String birthday, String studentName, String studentSoName, String studentEmail) {
+        LocalDate birthday1 = LocalDate.of(1974,4,19);
         LocalDate localdate1 = LocalDate.now();
-        int a = localdate.compareTo(localdate1);
+        int a = localdate1.compareTo(birthday1);
         if (a > 0) {
-        this.studentDate = studentDate;
+        this.birthday = birthday;
         this.studentName = studentName;
         this.studentSoName = studentSoName;
         this.studentEmail = studentEmail;
@@ -24,16 +33,16 @@ public class Student {
             System.out.println("Жашы ката корсотулгон");}
     }
 
-    public String getStudentDate() {
-        return studentDate;
+    public String getBirthday() {
+        return birthday;
     }
 
-    public void setStudentDate(String studentDate) {
-        LocalDate localdate = LocalDate.parse(studentDate);
+    public void setBirthday(String birthday) {
+        LocalDate birthday1 = LocalDate.of(1974, 4, 19);
         LocalDate localdate1 = LocalDate.now();
-        int a = localdate1.compareTo(localdate);
+        int a = localdate1.compareTo(birthday1);
         if (a > 0) {
-            this.studentDate = studentDate;
+            this.birthday = birthday;
         } else {
             System.out.println("Жашы ката корсотулгон");
         }

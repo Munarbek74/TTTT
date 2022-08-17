@@ -2,27 +2,30 @@ package com.company;
 
 import java.util.Date;
 
-public class Group {
-    private String[] student;
+public class Group extends Student{
     private String fakultet;
     private String date;
+    private Student[] students;
 
-    public Group(String[] student, String fakultet, String date) {
-        this.student = student;
+
+
+        public Group(Student[] students, String fakultet, String date) {
+        this.students = students;
         this.fakultet = fakultet;
-        this.date = date;;
+        this.date = date;
     }
 
     public Group() {
 
     }
 
-    public String[] getStudent() {
-        return student;
+    public Student[] getStudents() {
+        return students;
     }
 
-    public void setStudent(String[] student) {
-        this.student = student;
+    public void setStudents(Student[] students) {
+
+        this.students = students;
     }
 
     public String getFakultet() {

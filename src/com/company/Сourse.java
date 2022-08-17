@@ -1,17 +1,20 @@
 package com.company;
 
-public class Сourse {
+import java.util.Arrays;
+
+public class Сourse extends Group{
 
     private String courseName;
     private int courseNumber;
     private String courseNameTeacher;
-    private String[] courseGroupName;
+    private Group[] groups;
 
-    public Сourse(String courseName, int courseNumber, String courseNameTeacher, String[] courseGroupName) {
+
+    public Сourse(String courseName, int courseNumber, String courseNameTeacher, Group[] groups) {
         this.courseName = courseName;
         this.courseNumber = courseNumber;
         this.courseNameTeacher = courseNameTeacher;
-        this.courseGroupName = courseGroupName;
+        this.groups = groups;
     }
 
     public Сourse() {
@@ -42,11 +45,18 @@ public class Сourse {
         this.courseNameTeacher = courseNameTeacher;
     }
 
-    public String[] getCourseGroupName() {
-        return courseGroupName;
+    public Group[] getGroups() {
+        return groups;
     }
 
-    public void setCourseGroupName(String[] courseGroupName) {
-        this.courseGroupName = courseGroupName;
+    public void setGroups(Group[] groups) {
+        this.groups = groups;
+    }
+
+    @Override
+    public String toString() {
+        return "Сourse{" +
+                "groups=" + Arrays.toString(groups) +
+                '}';
     }
 }

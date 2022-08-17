@@ -13,7 +13,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Студент{" +
+        return "{" +
                 "Фамилиясы жана аты:'" + studentSoName + " " + studentName + '\'' +
                 ", туулган куну:'" + birthday + '\'' +
                 ", Электрондук дареги='" + studentEmail + '\'' +

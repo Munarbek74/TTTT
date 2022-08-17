@@ -5,6 +5,13 @@ import java.util.Date;
 public class Group extends Student{
     private String fakultet;
     private String date;
+
+    @Override
+    public String toString() {
+        return "{" + fakultet + '\'' +
+                '}';
+    }
+
     private Student[] students;
 
 

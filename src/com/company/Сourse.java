@@ -53,10 +53,5 @@ public class Сourse extends Group{
         this.groups = groups;
     }
 
-    @Override
-    public String toString() {
-        return "Сourse{" +
-                "groups=" + Arrays.toString(groups) +
-                '}';
-    }
+
 }
